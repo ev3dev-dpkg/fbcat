@@ -1,0 +1,5 @@
+fbcat (0.2-1) unstable; urgency=low
+
+  * Initial release (closes: #545375).
+
+ -- Piotr Lewandowski <piotr.lewandowski@gmail.com>  Thu, 10 Sep 2009 11:59:52 +0200

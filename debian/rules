@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+
+build:
+	dh build --until dh_auto_build
+	$(MAKE) -C doc
+	dh build --remaining
+
+%:
+	dh $@
+
+# vim:ts=4 sw=4 
