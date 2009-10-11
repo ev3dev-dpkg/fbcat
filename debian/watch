@@ -1,0 +1,4 @@
+version=3
+
+http://code.google.com/p/fbcat/downloads/list \
+  http://fbcat[.]googlecode[.]com/files/fbcat-([0-9.]+)[.]tar[.]gz
