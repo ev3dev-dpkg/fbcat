@@ -17,7 +17,7 @@ Provides: fbgrab
 Replaces: fbgrab (<< 1.0.0-6)
 Recommends: netpbm | graphicsmagick | imagemagick
 Description: framebuffer grabber
- fbcat grabs an image of a framebuffer and stores in a PPM file.
+ fbcat grabs a screenshot of a framebuffer and stores in a PPM file.
  .
  This package also provides a compatibility wrapper around fbcat to ease
  migration from fbgrab.
