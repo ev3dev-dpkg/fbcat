@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+
+if [ -x /bin/fbset ]
+then
+    /bin/fbset -i >&3
+else
+    cat <<EOF
+
+fbset was not found!
+Please consider installing fbset before reporting bugs in fbcat.
+
+Press ENTER to continue...
+EOF
+    getkey
+fi
+
+# vim:ts=4 sw=4 et
