@@ -3,6 +3,7 @@ fbcat (0.2-2) unstable; urgency=low
   * Add explicit build-dependency on linux-libc-dev.
   * debian/control: s/image/screenshot/ in description.
   * Add /usr/share/bug/fbcat script.
+  * Switch to 3.0 (quilt) source package format.
 
  -- Piotr Lewandowski <piotr.lewandowski@gmail.com>  Mon, 28 Dec 2009 17:22:22 +0100
 
