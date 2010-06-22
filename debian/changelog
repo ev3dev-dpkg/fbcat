@@ -1,8 +1,9 @@
 fbcat (0.2-3) UNRELEASED; urgency=low
 
   * Bump standards version to 3.8.4 (no changes needed).
+  * Update Jakub Wilk's address. 
 
- -- Piotr Lewandowski <piotr.lewandowski@gmail.com>  Thu, 04 Feb 2010 14:10:23 +0000
+ -- Piotr Lewandowski <piotr.lewandowski@gmail.com>  Tue, 22 Jun 2010 12:39:27 +0000
 
 fbcat (0.2-2) unstable; urgency=low
 
