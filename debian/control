@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: Piotr Lewandowski <piotr.lewandowski@gmail.com>
 Uploaders: Luca Bruno <lucab@debian.org>
 Build-Depends: debhelper (>= 7), docbook-xml (>= 4.5), docbook-xsl, xsltproc, libxml2-utils, linux-libc-dev
-Standards-Version: 3.8.4
+Standards-Version: 3.9.3
 Vcs-Browser: http://git.debian.org/?p=collab-maint/fbcat.git
 Vcs-Git: git://git.debian.org/collab-maint/fbcat.git
 Homepage: http://fbcat.googlecode.com/
