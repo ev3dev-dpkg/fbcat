@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-build:
+build build-arch:
 	dh build --until dh_auto_build
 	$(MAKE) -C doc
 	dh build --remaining
