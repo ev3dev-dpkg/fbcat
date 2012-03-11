@@ -1,15 +1,17 @@
-Format-Specification: http://svn.debian.org/wsvn/dep/web/deps/dep5.mdwn?op=file&rev=59
-Name: fbcat
-Maintainer: Piotr Lewandowski <piotr.lewandowski@gmail.com>,
-            Jakub Wilk <jwilk@jwilk.net>
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: fbcat
+Upstream-Contact: Piotr Lewandowski <piotr.lewandowski@gmail.com>,
+                  Jakub Wilk <jwilk@jwilk.net>
 Source: http://fbcat.googlecode.com/
 
+Files: *
 Copyright: 2009, Piotr Lewandowski <piotr.lewandowski@gmail.com>
-           2009, Jakub Wilk <jwilk@jwilk.net>
+           2009, 2010, 2011, Jakub Wilk <jwilk@jwilk.net>
 License: GPL-2
 
 Files: debian/*
 Copyright: 2009, Piotr Lewandowski <piotr.lewandowski@gmail.com>
+           2009, Luca Bruno <lucab@debian.org>
 License: GPL-2
 
 License: GPL-2

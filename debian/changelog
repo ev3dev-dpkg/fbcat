@@ -3,8 +3,9 @@ fbcat (0.2-3) UNRELEASED; urgency=low
   * Bump standards version to 3.8.4 (no changes needed).
   * Update Jakub Wilk's address. 
   * Update debian/watch.
+  * Update debian/copyright to conform to the new standard.
 
- -- Piotr Lewandowski <piotr.lewandowski@gmail.com>  Tue, 22 Jun 2010 12:44:44 +0000
+ -- Piotr Lewandowski <piotr.lewandowski@gmail.com>  Sun, 11 Mar 2012 00:57:42 +0000
 
 fbcat (0.2-2) unstable; urgency=low
 
