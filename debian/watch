@@ -1,4 +1,5 @@
 version=3
-
-http://code.google.com/p/fbcat/downloads/list \
-  http://fbcat[.]googlecode[.]com/files/fbcat-([0-9.]+)[.]tar[.]gz
+opts=\
+downloadurlmangle=s|.*[?]name=(.*?)&.*|http://fbcat.googlecode.com/files/$1|,\
+filenamemangle=s|[^/]+[?]name=(.*?)&.*|$1| \
+http://code.google.com/p/fbcat/downloads/detail[?]name=fbcat-([0-9.]+).tar.gz&.*

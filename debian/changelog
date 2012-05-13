@@ -1,3 +1,13 @@
+fbcat (0.2-3) unstable; urgency=low
+
+  * Bump standards version to 3.9.3 (no changes needed).
+  * Update Jakub Wilk's address. 
+  * Update debian/watch.
+  * Update debian/copyright to conform to the new standard.
+  * debian/rules: fix build-arch target (closes: #652979). Thanks Jakub Wilk!
+
+ -- Piotr Lewandowski <piotr.lewandowski@gmail.com>  Mon, 12 Mar 2012 15:06:26 +0000
+
 fbcat (0.2-2) unstable; urgency=low
 
   * Add explicit build-dependency on linux-libc-dev.
