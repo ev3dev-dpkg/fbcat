@@ -1,5 +1,8 @@
 #!/usr/bin/make -f
 
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/buildflags.mk
+
 build build-arch:
 	dh build --until dh_auto_build
 	$(MAKE) -C doc
