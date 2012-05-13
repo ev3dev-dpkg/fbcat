@@ -12,9 +12,9 @@ Homepage: http://fbcat.googlecode.com/
 Package: fbcat
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Conflicts: fbgrab (<< 1.0.0-6)
+Conflicts: fbgrab
 Provides: fbgrab 
-Replaces: fbgrab (<< 1.0.0-6)
+Replaces: fbgrab
 Recommends: netpbm | graphicsmagick | imagemagick
 Description: framebuffer grabber
  fbcat grabs a screenshot of a framebuffer and stores in a PPM file.
