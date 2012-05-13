@@ -1,10 +1,12 @@
 #!/bin/sh
 
-# Copyright © 2009 Jakub Wilk
+# Copyright © 2009, 2011 Jakub Wilk
 #
 # This package is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; version 2 dated June, 1991.
+
+set -e
 
 usage()
 {
@@ -45,7 +47,7 @@ grab_vt=''
 wait_after_switch=0
 wait_before_switch=0
 device=${FRAMEBUFFER:-/dev/fb0}
-opts=`getopt -o 'b:c:C:d:f:h:is:w:?' -- "$@"`
+opts=$(getopt -o 'b:c:C:d:f:h:is:w:?' -- "$@")
 interlace=''
 eval set -- "$opts"
 while true
@@ -93,7 +95,7 @@ fi
 sleep "$wait_before_switch"
 if [ -n "$grab_vt" ]
 then
-  current_vt=`fgconsole`
+  current_vt=$(fgconsole)
   chvt "$grab_vt"
 fi
 sleep "$wait_after_switch"
