@@ -1,3 +1,12 @@
+fbcat (0.5-1ev3dev1) testing; urgency=medium
+
+  * target ev3dev-stretch
+  * update debian/watch for github
+  * Imported Upstream version 0.5
+  * Updates for stretch and new repository
+
+ -- David Lechner <david@lechnology.com>  Sat, 19 Aug 2017 20:19:20 -0500
+
 fbcat (0.3-1ev3dev1) stable; urgency=low
 
   * Add monochrome frame buffer support. 
