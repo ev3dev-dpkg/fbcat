@@ -1,17 +1,19 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: fbcat
-Upstream-Contact: Piotr Lewandowski <piotr.lewandowski@gmail.com>,
-                  Jakub Wilk <jwilk@jwilk.net>
-Source: http://fbcat.googlecode.com/
+Upstream-Contact: Jakub Wilk <jwilk@jwilk.net>
+Source: http://github.com/jwilk/fbcat
 
 Files: *
 Copyright: 2009, Piotr Lewandowski <piotr.lewandowski@gmail.com>
-           2009, 2010, 2011, Jakub Wilk <jwilk@jwilk.net>
+           2009-2017 Jakub Wilk <jwilk@jwilk.net>
+           2013, 2017 David Lechner <david@lechnology.com>         
+           2017 Kaelin Laundry
 License: GPL-2
 
 Files: debian/*
 Copyright: 2009, 2012, Piotr Lewandowski <piotr.lewandowski@gmail.com>
            2009, Luca Bruno <lucab@debian.org>
+           2013, 2017 David Lechner <david@lechnology.com>
 License: GPL-2
 
 License: GPL-2

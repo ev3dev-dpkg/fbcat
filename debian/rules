@@ -1,14 +1,8 @@
 #!/usr/bin/make -f
 
-DPKG_EXPORT_BUILDFLAGS = 1
-include /usr/share/dpkg/buildflags.mk
-
-build build-arch:
-	dh build --until dh_auto_build
-	$(MAKE) -C doc
-	dh build --remaining
-
 %:
 	dh $@
 
-# vim:ts=4 sw=4 
+override_dh_auto_build:
+	dh_auto_build
+	dh_auto_build -Ddoc
