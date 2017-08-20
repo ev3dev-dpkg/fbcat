@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<!DOCTYPE refentry PUBLIC '-//OASIS//DTD DocBook XML V4.5//EN' 'http://www.docbook.org/xml/4.5/docbookx.dtd' 
+<!DOCTYPE refentry PUBLIC '-//OASIS//DTD DocBook XML V4.5//EN' 'http://www.docbook.org/xml/4.5/docbookx.dtd'
 [
 	<!ENTITY p 'fbcat'>
-	<!ENTITY version '0.3'>
+	<!ENTITY version '0.5'>
 ]>
 
 <refentry>
@@ -10,9 +10,15 @@
 <refentryinfo>
 	<title>&p; manual</title>
 	<productname>&p;</productname>
+	<date>2015-06-27</date>
+	<!-- copyright information for THIS document: -->
 	<copyright>
 		<year>2009</year>
 		<holder>Piotr Lewandowski</holder>
+	</copyright>
+	<copyright>
+		<year>2009</year>
+		<year>2013</year>
 		<holder>Jakub Wilk</holder>
 	</copyright>
 </refentryinfo>
@@ -40,7 +46,7 @@
 	<para>
 		<command>fbcat</command> takes a screenshot using the framebuffer device. The produced image is in PPM format.
 		Note that redirection of standard output to a file or another process is needed since fbcat will refuse to write
-		it's output directly to the terminal.
+		its output directly to the terminal.
 	</para>
 </refsection>
 
@@ -60,4 +66,4 @@
 
 </refentry>
 
-<!-- vim:set ts=4 sw=4 tw=120: -->
+<!-- vim:set ts=4 sts=4 sw=4 tw=120: -->
