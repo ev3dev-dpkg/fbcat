@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# Copyright © 2009, 2011 Jakub Wilk
+# Copyright © 2009-2017 Jakub Wilk
+# Copyright © 2017 Kaelin Laundry
 #
 # This package is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -11,7 +12,7 @@ set -e
 usage()
 {
   cat <<EOF
-Usage: $0 [option...] <filename.png>
+Usage: $0 [option...] <filename.png|->
 
 Options:
 -c <N>      grab from /dev/ttyN
@@ -20,19 +21,21 @@ Options:
 -i          turn on PNG interlacing
 -s <N>      sleep <N> seconds before making screenshot
 -?          display this help and exit
+
+If the specified destination is "-", the PNG output is piped to stdout.
 EOF
   exit 1
 }
 
 not_supported_option()
 {
-  printf -- '%s option is not supported\n' "$1" >&2
+  printf -- 'fbgrab: the %s option is not supported.\n' "$1" >&2
   exit 3
 }
 
 no_ppm2png()
 {
-  printf -- 'No PPM -> PNG conversion tool found.\nPlease install Netpbm or GraphicsMagick, or ImageMagick.\n' >&2
+  printf -- 'fbgrab: no PPM -> PNG conversion tool found.\nPlease install Netpbm or GraphicsMagick, or ImageMagick.\n' >&2
   exit 4
 }
 
@@ -47,7 +50,7 @@ grab_vt=''
 wait_after_switch=0
 wait_before_switch=0
 device=${FRAMEBUFFER:-/dev/fb0}
-opts=$(getopt -o 'b:c:C:d:f:h:is:w:?' -- "$@")
+opts=$(getopt -n fbgrab -o 'b:c:C:d:f:h:is:w:?' -- "$@")
 interlace=''
 eval set -- "$opts"
 while true
@@ -74,7 +77,8 @@ if command -v pnmtopng >/dev/null 2>/dev/null
 then
   ppm2png()
   {
-    pnmtopng ${interlace:+-interlace} - > "$1"
+    [ "$1" = "-" ] || exec > "$1"
+    pnmtopng ${interlace:+-interlace} -
   }
 elif gm -version 2>/dev/null | grep -q -w GraphicsMagick
 then
@@ -105,4 +109,4 @@ then
   chvt "$current_vt"
 fi
 
-# vim:ts=2 sw=2 et
+# vim:ts=2 sts=2 sw=2 et

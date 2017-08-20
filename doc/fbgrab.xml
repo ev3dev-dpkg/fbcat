@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<!DOCTYPE refentry PUBLIC '-//OASIS//DTD DocBook XML V4.5//EN' 'http://www.docbook.org/xml/4.5/docbookx.dtd' 
+<!DOCTYPE refentry PUBLIC '-//OASIS//DTD DocBook XML V4.5//EN' 'http://www.docbook.org/xml/4.5/docbookx.dtd'
 [
 	<!ENTITY p 'fbgrab'>
-	<!ENTITY version '0.3'>
+	<!ENTITY version '0.5'>
 ]>
 
 <refentry>
@@ -10,10 +10,22 @@
 <refentryinfo>
 	<title>&p; manual</title>
 	<productname>&p;</productname>
+	<date>2017-08-16</date>
+	<!-- copyright information for THIS document: -->
+	<copyright>
+		<year>2009</year>
+		<holder>Piotr Lewandowski</holder>
+	</copyright>
 	<copyright>
 		<year>2009</year>
 		<year>2011</year>
+		<year>2013</year>
+		<year>2017</year>
 		<holder>Jakub Wilk</holder>
+	</copyright>
+	<copyright>
+		<year>2017</year>
+		<holder>David Lechner</holder>
 	</copyright>
 </refentryinfo>
 
@@ -118,6 +130,9 @@
 			</varlistentry>
 		</variablelist>
 	</para>
+	<para>
+		Specify <replaceable>png-file</replaceable> as <quote><literal>-</literal></quote> to write to standard output.
+	</para>
 </refsection>
 
 <refsection>
@@ -169,4 +184,4 @@
 
 </refentry>
 
-<!-- vim:set ts=4 sw=4 tw=120: -->
+<!-- vim:set ts=4 sts=4 sw=4 tw=120: -->

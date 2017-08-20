@@ -1,17 +1,23 @@
-XSL = http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl
-XSLTPROC = /usr/bin/xsltproc --nonet --param man.charmap.use.subset 0
+xsl = http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl
+xsltproc = xsltproc --nonet \
+	--param man.charmap.use.subset 0 \
+	--param man.copyright.section.enabled 0 \
 
-XML_FILES = $(wildcard *.xml)
-MAN_FILES = $(XML_FILES:.xml=.1)
+xml_files = $(wildcard *.xml)
+man_files = $(xml_files:.xml=.1)
 
 .PHONY: all
-all: $(MAN_FILES)
+all: $(man_files)
 
 %.1: %.xml
-	$(XSLTPROC) $(XSL) $(<)
+	$(xsltproc) $(xsl) $(<)
+
+.PHONY: validate
+validate: $(xml_files)
+	xmllint --nonet --noout --valid $(^)
 
 .PHONY: clean
 clean:
-	rm -f $(MAN_FILES)
+	rm -f $(man_files)
 
-# vim:ts=4
+# vim:ts=4 sts=4 sw=4 noet
