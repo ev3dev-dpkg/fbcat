@@ -1,5 +1,3 @@
 version=3
-opts=\
-downloadurlmangle=s|.*[?]name=(.*?)&.*|http://fbcat.googlecode.com/files/$1|,\
-filenamemangle=s|[^/]+[?]name=(.*?)&.*|$1| \
-http://code.google.com/p/fbcat/downloads/detail[?]name=fbcat-([0-9.]+).tar.gz&.*
+opts=filenamemangle=s/.+\/v?(\d\S+)\.tar\.gz/fbcat-$1\.tar\.gz/ \
+  https://github.com/jwilk/fbcat/tags .*/v?(\d\S+)\.tar\.gz
